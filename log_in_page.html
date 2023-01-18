@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Login</h1>
+      <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Log In</button>
+      </form>
+    </div>
+    <script>
+      // Get the form element
+      const form = document.getElementById("login-form");
+
+      // Add an event listener to the form to handle the submit event
+      form.addEventListener("submit", (event) => {
+        event.preventDefault(); // prevent the form from submitting
+
+        // Get the values of the username and password fields
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Perform validation
+        if (username === "" || password === "") {
+          alert("Please enter a username and password.");
+        } else {
+          // Send the data to the server for authentication
+          // ...
+          // Handle the response from the server
+          // ...
+        }
+      });
+    </script>
+  </body>
+</html>
