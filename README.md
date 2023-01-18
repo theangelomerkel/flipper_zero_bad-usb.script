@@ -1,0 +1,1 @@
+# flipper_zero_bad-usb.script
